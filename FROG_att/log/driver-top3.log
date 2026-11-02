@@ -1,0 +1,56 @@
+loading... | rel-f1 | driver-top3
+Namespace(dataset='rel-f1', task='driver-top3', lr=0.005, epochs=10, warmup=0, batch_size=64, channels=128, aggr='sum', num_layers=1, num_neighbors=128, temporal_strategy='uniform', max_steps_per_epoch=1000, num_workers=0, seed=42, beta=1e-06, gamma=0.1, MAE=0.99, dropout=0.3, optim='both', id_aware=True, vis=False, scheduler=False, fix=False, fix_attn=0.5, include_task_tables='none', cache_dir='/home/huangyi25/.cache/relbench_examples', load_para=True)
+Loading Database object from /home/huangyi25/.cache/relbench/rel-f1/db...
+Done in 0.34 seconds.
+processing table name: constructor_results
+processing table name: races
+processing table name: circuits
+processing table name: constructor_standings
+processing table name: standings
+processing table name: constructors
+processing table name: qualifying
+processing table name: results
+processing table name: drivers
+==================================================
+('constructor_results', 'f2p_raceId', 'races') : torch.Size([2, 9408])
+('races', 'rev_f2p_raceId', 'constructor_results') : torch.Size([2, 9408])
+('constructor_results', 'f2p_constructorId', 'constructors') : torch.Size([2, 9408])
+('constructors', 'rev_f2p_constructorId', 'constructor_results') : torch.Size([2, 9408])
+('races', 'f2p_circuitId', 'circuits') : torch.Size([2, 820])
+('circuits', 'rev_f2p_circuitId', 'races') : torch.Size([2, 820])
+('constructor_standings', 'f2p_raceId', 'races') : torch.Size([2, 10170])
+('races', 'rev_f2p_raceId', 'constructor_standings') : torch.Size([2, 10170])
+('constructor_standings', 'f2p_constructorId', 'constructors') : torch.Size([2, 10170])
+('constructors', 'rev_f2p_constructorId', 'constructor_standings') : torch.Size([2, 10170])
+('standings', 'f2p_raceId', 'races') : torch.Size([2, 28115])
+('races', 'rev_f2p_raceId', 'standings') : torch.Size([2, 28115])
+('standings', 'f2p_driverId', 'drivers') : torch.Size([2, 28115])
+('drivers', 'rev_f2p_driverId', 'standings') : torch.Size([2, 28115])
+('qualifying', 'f2p_raceId', 'races') : torch.Size([2, 4082])
+('races', 'rev_f2p_raceId', 'qualifying') : torch.Size([2, 4082])
+('qualifying', 'f2p_driverId', 'drivers') : torch.Size([2, 4082])
+('drivers', 'rev_f2p_driverId', 'qualifying') : torch.Size([2, 4082])
+('qualifying', 'f2p_constructorId', 'constructors') : torch.Size([2, 4082])
+('constructors', 'rev_f2p_constructorId', 'qualifying') : torch.Size([2, 4082])
+('results', 'f2p_raceId', 'races') : torch.Size([2, 20323])
+('races', 'rev_f2p_raceId', 'results') : torch.Size([2, 20323])
+('results', 'f2p_driverId', 'drivers') : torch.Size([2, 20323])
+('drivers', 'rev_f2p_driverId', 'results') : torch.Size([2, 20323])
+('results', 'f2p_constructorId', 'constructors') : torch.Size([2, 20323])
+('constructors', 'rev_f2p_constructorId', 'results') : torch.Size([2, 20323])
+==================================================
+Epoch: 01, Train loss: (1.4822416818767499, 492343.5, 0.9842580556869507), Val metrics: {'average_precision': np.float64(0.3266701877243148), 'accuracy': 0.7976190476190477, 'f1': np.float64(0.0), 'roc_auc': np.float64(0.6983927899518017)}, Test metrics: {'average_precision': np.float64(0.33051495732347913), 'accuracy': 0.8236914600550964, 'f1': np.float64(0.0), 'roc_auc': np.float64(0.7868088942307693)}
+Epoch: 02, Train loss: (0.7623642076409841, 270401.625, 0.691057026386261), Val metrics: {'average_precision': np.float64(0.34759095051186617), 'accuracy': 0.8078231292517006, 'f1': np.float64(0.16296296296296298), 'roc_auc': np.float64(0.7290319112719714)}, Test metrics: {'average_precision': np.float64(0.4392487128121265), 'accuracy': 0.7920110192837465, 'f1': np.float64(0.03821656050955414), 'roc_auc': np.float64(0.850419366638796)}
+Epoch: 03, Train loss: (0.581700688587324, 164735.71875, 0.6498765349388123), Val metrics: {'average_precision': np.float64(0.36830314810819287), 'accuracy': 0.7142857142857143, 'f1': np.float64(0.3684210526315789), 'roc_auc': np.float64(0.7430434860511369)}, Test metrics: {'average_precision': np.float64(0.38708388346675765), 'accuracy': 0.778236914600551, 'f1': np.float64(0.3481781376518219), 'roc_auc': np.float64(0.8252051107859532)}
+Epoch: 04, Train loss: (0.46465784401604626, 97404.2421875, 0.6261714696884155), Val metrics: {'average_precision': np.float64(0.40554482786962287), 'accuracy': 0.8027210884353742, 'f1': np.float64(0.18309859154929578), 'roc_auc': np.float64(0.7327587751518518)}, Test metrics: {'average_precision': np.float64(0.36637838293477415), 'accuracy': 0.7920110192837465, 'f1': np.float64(0.03821656050955414), 'roc_auc': np.float64(0.8100896216555183)}
+Epoch: 05, Train loss: (0.4577074633072855, 61672.21484375, 0.6297563910484314), Val metrics: {'average_precision': np.float64(0.4144157297444755), 'accuracy': 0.7959183673469388, 'f1': np.float64(0.1780821917808219), 'roc_auc': np.float64(0.7381340595939867)}, Test metrics: {'average_precision': np.float64(0.34874967081408875), 'accuracy': 0.7920110192837465, 'f1': np.float64(0.03821656050955414), 'roc_auc': np.float64(0.8035574310200667)}
+Epoch: 06, Train loss: (0.4136627497976124, 45639.51171875, 0.5925542712211609), Val metrics: {'average_precision': np.float64(0.4001656914472837), 'accuracy': 0.7959183673469388, 'f1': np.float64(0.1891891891891892), 'roc_auc': np.float64(0.7342996900252637)}, Test metrics: {'average_precision': np.float64(0.38832488212681404), 'accuracy': 0.7920110192837465, 'f1': np.float64(0.03821656050955414), 'roc_auc': np.float64(0.8217822428929765)}
+Epoch: 07, Train loss: (0.35706001720601155, 26259.81640625, 0.5597560405731201), Val metrics: {'average_precision': np.float64(0.3956935310271732), 'accuracy': 0.8027210884353742, 'f1': np.float64(0.23684210526315788), 'roc_auc': np.float64(0.7349088889287058)}, Test metrics: {'average_precision': np.float64(0.3626352280143621), 'accuracy': 0.7920110192837465, 'f1': np.float64(0.03821656050955414), 'roc_auc': np.float64(0.811382995401338)}
+Epoch: 08, Train loss: (0.33389930569147586, 24012.34375, 0.5106446743011475), Val metrics: {'average_precision': np.float64(0.3894664985948373), 'accuracy': 0.7772108843537415, 'f1': np.float64(0.20606060606060606), 'roc_auc': np.float64(0.7340667610327714)}, Test metrics: {'average_precision': np.float64(0.34931476637594017), 'accuracy': 0.7892561983471075, 'f1': np.float64(0.03773584905660377), 'roc_auc': np.float64(0.8025514736622072)}
+Epoch: 09, Train loss: (0.31588522524897117, 17848.56640625, 0.40822121500968933), Val metrics: {'average_precision': np.float64(0.3990413371659574), 'accuracy': 0.7959183673469388, 'f1': np.float64(0.2), 'roc_auc': np.float64(0.7338696672698931)}, Test metrics: {'average_precision': np.float64(0.35293588447486424), 'accuracy': 0.7920110192837465, 'f1': np.float64(0.03821656050955414), 'roc_auc': np.float64(0.804876933528428)}
+Epoch: 10, Train loss: (0.3107123034624197, 17094.544921875, 0.34452107548713684), Val metrics: {'average_precision': np.float64(0.40473969238034146), 'accuracy': 0.7925170068027211, 'f1': np.float64(0.21794871794871795), 'roc_auc': np.float64(0.7331171274479942)}, Test metrics: {'average_precision': np.float64(0.3722721000437172), 'accuracy': 0.7920110192837465, 'f1': np.float64(0.03821656050955414), 'roc_auc': np.float64(0.8168961642976588)}
+load best model 3
+Best Val metrics: {'average_precision': np.float64(0.3518460644850964), 'accuracy': 0.7193877551020408, 'f1': np.float64(0.38661710037174724), 'roc_auc': np.float64(0.7299815448567487)}
+Best test metrics: {'average_precision': np.float64(0.3865811296714167), 'accuracy': 0.778236914600551, 'f1': np.float64(0.3481781376518219), 'roc_auc': np.float64(0.8289284594481605)}
+Table as node/edge:
+{'circuits_races_constructor_results': 0.5, 'races_standings_drivers': tensor(0.5260, device='cuda:0'), 'drivers_qualifying_races': tensor(0.9779, device='cuda:0'), 'constructors_constructor_results_races': tensor(0.0060, device='cuda:0'), 'races_qualifying_drivers': tensor(0.0094, device='cuda:0'), 'drivers_qualifying_constructors': tensor(0.9415, device='cuda:0'), 'races_results_drivers': tensor(0.9691, device='cuda:0'), 'circuits_races_results': tensor(0.9917, device='cuda:0'), 'drivers_standings_races': tensor(0.9939, device='cuda:0'), 'races_qualifying_constructors': tensor(0.0203, device='cuda:0'), 'circuits_races_standings': tensor(0.9424, device='cuda:0'), 'circuits_races_qualifying': tensor(0.0078, device='cuda:0'), 'drivers_results_constructors': tensor(0.0061, device='cuda:0'), 'constructors_results_drivers': tensor(0.0349, device='cuda:0'), 'constructors_qualifying_drivers': tensor(0.9554, device='cuda:0'), 'constructors_qualifying_races': tensor(0.9659, device='cuda:0'), 'constructors_constructor_standings_races': tensor(0.6989, device='cuda:0'), 'races_results_constructors': tensor(0.0061, device='cuda:0'), 'races_constructor_results_constructors': tensor(0.0067, device='cuda:0'), 'circuits_races_constructor_standings': 0.5, 'drivers_results_races': tensor(0.0061, device='cuda:0'), 'constructors_results_races': tensor(0.0063, device='cuda:0'), 'races_constructor_standings_constructors': tensor(0.5534, device='cuda:0')}

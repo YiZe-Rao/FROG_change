@@ -1,0 +1,61 @@
+loading... | rel-avito | ad-ctr
+Namespace(dataset='rel-avito', task='ad-ctr', lr=0.001, epochs=20, warmup=0, batch_size=128, channels=32, aggr='sum', num_layers=2, num_neighbors=64, temporal_strategy='uniform', max_steps_per_epoch=1000, num_workers=0, seed=42, beta=1e-06, gamma=0.1, MAE=0.99, dropout=0.0, optim='both', id_aware=True, vis=False, scheduler=False, fix=False, fix_attn=0.5, include_task_tables='none', cache_dir='/home/huangyi25/.cache/relbench_examples', load_para=True)
+Loading Database object from /home/huangyi25/.cache/relbench/rel-avito/db...
+Done in 6.57 seconds.
+processing table name: SearchStream
+processing table name: Category
+processing table name: PhoneRequestsStream
+processing table name: VisitStream
+processing table name: SearchInfo
+processing table name: AdsInfo
+processing table name: Location
+processing table name: UserInfo
+==================================================
+('SearchStream', 'f2p_SearchID', 'SearchInfo') : torch.Size([2, 7107268])
+('SearchInfo', 'rev_f2p_SearchID', 'SearchStream') : torch.Size([2, 7107268])
+('SearchStream', 'f2p_AdID', 'AdsInfo') : torch.Size([2, 7107274])
+('AdsInfo', 'rev_f2p_AdID', 'SearchStream') : torch.Size([2, 7107274])
+('PhoneRequestsStream', 'f2p_UserID', 'UserInfo') : torch.Size([2, 243415])
+('UserInfo', 'rev_f2p_UserID', 'PhoneRequestsStream') : torch.Size([2, 243415])
+('PhoneRequestsStream', 'f2p_AdID', 'AdsInfo') : torch.Size([2, 243836])
+('AdsInfo', 'rev_f2p_AdID', 'PhoneRequestsStream') : torch.Size([2, 243836])
+('VisitStream', 'f2p_UserID', 'UserInfo') : torch.Size([2, 5254710])
+('UserInfo', 'rev_f2p_UserID', 'VisitStream') : torch.Size([2, 5254710])
+('VisitStream', 'f2p_AdID', 'AdsInfo') : torch.Size([2, 5265422])
+('AdsInfo', 'rev_f2p_AdID', 'VisitStream') : torch.Size([2, 5265422])
+('SearchInfo', 'f2p_UserID', 'UserInfo') : torch.Size([2, 1961902])
+('UserInfo', 'rev_f2p_UserID', 'SearchInfo') : torch.Size([2, 1961902])
+('SearchInfo', 'f2p_LocationID', 'Location') : torch.Size([2, 1987154])
+('Location', 'rev_f2p_LocationID', 'SearchInfo') : torch.Size([2, 1987154])
+('SearchInfo', 'f2p_CategoryID', 'Category') : torch.Size([2, 1987156])
+('Category', 'rev_f2p_CategoryID', 'SearchInfo') : torch.Size([2, 1987156])
+('AdsInfo', 'f2p_LocationID', 'Location') : torch.Size([2, 5935808])
+('Location', 'rev_f2p_LocationID', 'AdsInfo') : torch.Size([2, 5935808])
+('AdsInfo', 'f2p_CategoryID', 'Category') : torch.Size([2, 5960526])
+('Category', 'rev_f2p_CategoryID', 'AdsInfo') : torch.Size([2, 5960526])
+==================================================
+Epoch: 01, Train loss: (0.32563377088191464, 2436.162109375, 0.6558452248573303), Val metrics: {'r2': -0.08636765028215043, 'mae': np.float64(0.043926250681655815), 'rmse': np.float64(0.1033963081469689)}, Test metrics: {'r2': -0.1199140529686058, 'mae': np.float64(0.04908319313471446), 'rmse': np.float64(0.11614722137986203)}
+Epoch: 02, Train loss: (0.0938203876509386, 1500.3636474609375, 0.4996104836463928), Val metrics: {'r2': 0.04703063275752395, 'mae': np.float64(0.03770322445521632), 'rmse': np.float64(0.09684029196554336)}, Test metrics: {'r2': 0.020956206775262443, 'mae': np.float64(0.04184638556724486), 'rmse': np.float64(0.10859692713599253)}
+Epoch: 03, Train loss: (0.07132915495657453, 1606.0634765625, 0.30615630745887756), Val metrics: {'r2': 0.05265800201403348, 'mae': np.float64(0.037002667947540785), 'rmse': np.float64(0.096553943322931)}, Test metrics: {'r2': 0.025890189219463622, 'mae': np.float64(0.041203921952768285), 'rmse': np.float64(0.10832293933537268)}
+Epoch: 04, Train loss: (0.05684388354128482, 1373.9566650390625, 0.1848040372133255), Val metrics: {'r2': 0.02733922328796401, 'mae': np.float64(0.03706304630943965), 'rmse': np.float64(0.09783569202925814)}, Test metrics: {'r2': -0.014130227173324794, 'mae': np.float64(0.041754833985484414), 'rmse': np.float64(0.11052571704471903)}
+Epoch: 05, Train loss: (0.050721423912282085, 1275.8121337890625, 0.16502511501312256), Val metrics: {'r2': 0.06077205341457126, 'mae': np.float64(0.03572504763741767), 'rmse': np.float64(0.09613955841956254)}, Test metrics: {'r2': 0.017371089080455926, 'mae': np.float64(0.04056456690738791), 'rmse': np.float64(0.10879557861547577)}
+Epoch: 06, Train loss: (0.04933398628059556, 819.7942504882812, 0.1538010686635971), Val metrics: {'r2': 0.11928538886781848, 'mae': np.float64(0.035134496830220775), 'rmse': np.float64(0.09309668578369397)}, Test metrics: {'r2': 0.06676771259415026, 'mae': np.float64(0.03999994242449768), 'rmse': np.float64(0.10602575049962806)}
+Epoch: 07, Train loss: (0.04547765309027597, 720.6445922851562, 0.12377253919839859), Val metrics: {'r2': 0.11232558920311542, 'mae': np.float64(0.03488676244820193), 'rmse': np.float64(0.09346380768725485)}, Test metrics: {'r2': 0.05996698255603716, 'mae': np.float64(0.03977422562781404), 'rmse': np.float64(0.10641136919917425)}
+Epoch: 08, Train loss: (0.04362424003727296, 647.5806274414062, 0.11218073219060898), Val metrics: {'r2': 0.10866773356226755, 'mae': np.float64(0.03627396319550241), 'rmse': np.float64(0.09365617869684156)}, Test metrics: {'r2': 0.04356607270474766, 'mae': np.float64(0.04154185301596603), 'rmse': np.float64(0.10733564342506731)}
+Epoch: 09, Train loss: (0.04497919019238621, 618.486328125, 0.0932147279381752), Val metrics: {'r2': 0.03361260170659919, 'mae': np.float64(0.038960903083732595), 'rmse': np.float64(0.09751967580766036)}, Test metrics: {'r2': -0.009651839205964352, 'mae': np.float64(0.04421313072801892), 'rmse': np.float64(0.1102814068510067)}
+Epoch: 10, Train loss: (0.04265603935017305, 575.9092407226562, 0.08791925758123398), Val metrics: {'r2': 0.1700044033804714, 'mae': np.float64(0.03596533740336919), 'rmse': np.float64(0.09037629096595799)}, Test metrics: {'r2': 0.11196115768200077, 'mae': np.float64(0.040159667722454544), 'rmse': np.float64(0.10342665006863266)}
+Epoch: 11, Train loss: (0.044857424632007, 509.2101135253906, 0.08335942775011063), Val metrics: {'r2': 0.15508549373221137, 'mae': np.float64(0.03439723792554106), 'rmse': np.float64(0.09118491614795007)}, Test metrics: {'r2': 0.09415904136591025, 'mae': np.float64(0.03916864996257123), 'rmse': np.float64(0.10445817989609014)}
+Epoch: 12, Train loss: (0.03980500904660599, 451.33758544921875, 0.08090221136808395), Val metrics: {'r2': 0.016200630334501143, 'mae': np.float64(0.039557614316769275), 'rmse': np.float64(0.09839428853185751)}, Test metrics: {'r2': -0.029753652160322552, 'mae': np.float64(0.044935036228143675), 'rmse': np.float64(0.11137382822631399)}
+Epoch: 13, Train loss: (0.038267099182395375, 429.35491943359375, 0.07073690742254257), Val metrics: {'r2': 0.1165980426428721, 'mae': np.float64(0.03406636581239709), 'rmse': np.float64(0.09323861170790344)}, Test metrics: {'r2': 0.0761045893807254, 'mae': np.float64(0.038710816396215215), 'rmse': np.float64(0.10549402976538577)}
+Epoch: 14, Train loss: (0.03784032889148768, 383.16650390625, 0.05890608951449394), Val metrics: {'r2': 0.14205548809542767, 'mae': np.float64(0.034710267557537075), 'rmse': np.float64(0.09188533859737398)}, Test metrics: {'r2': 0.08965253426518915, 'mae': np.float64(0.039663947413293675), 'rmse': np.float64(0.10471769427261046)}
+Epoch: 15, Train loss: (0.039941163901604855, 354.6505432128906, 0.06231037154793739), Val metrics: {'r2': 0.10174976437566996, 'mae': np.float64(0.037548110192815655), 'rmse': np.float64(0.09401892683673739)}, Test metrics: {'r2': 0.03135209027919361, 'mae': np.float64(0.043631815188235015), 'rmse': np.float64(0.10801882533387255)}
+Epoch: 16, Train loss: (0.04011309769223718, 346.65228271484375, 0.06798982620239258), Val metrics: {'r2': 0.10762345876268964, 'mae': np.float64(0.03401865351960505), 'rmse': np.float64(0.09371102589666154)}, Test metrics: {'r2': 0.06483606810274967, 'mae': np.float64(0.03880638067081835), 'rmse': np.float64(0.10613542211682805)}
+Epoch: 17, Train loss: (0.037715317218327056, 300.05572509765625, 0.06484001129865646), Val metrics: {'r2': 0.06572533276103532, 'mae': np.float64(0.034916098080369794), 'rmse': np.float64(0.09588571397043864)}, Test metrics: {'r2': 0.03449951902173809, 'mae': np.float64(0.03950296278842868), 'rmse': np.float64(0.10784318969919458)}
+Epoch: 18, Train loss: (0.03728926499976831, 301.33056640625, 0.055958688259124756), Val metrics: {'r2': 0.07327433924971072, 'mae': np.float64(0.03555077041123349), 'rmse': np.float64(0.0954975465432322)}, Test metrics: {'r2': 0.03500513053598542, 'mae': np.float64(0.040695513379271735), 'rmse': np.float64(0.10781494843986465)}
+Epoch: 19, Train loss: (0.03723414379007676, 280.08062744140625, 0.06481298804283142), Val metrics: {'r2': 0.11276539840486521, 'mae': np.float64(0.0337421407259629), 'rmse': np.float64(0.09344065092219465)}, Test metrics: {'r2': 0.07979086524495294, 'mae': np.float64(0.03820247139994227), 'rmse': np.float64(0.10528336264445573)}
+Epoch: 20, Train loss: (0.03620491506714447, 250.2606658935547, 0.05588065832853317), Val metrics: {'r2': 0.13172890899789969, 'mae': np.float64(0.03416279220225695), 'rmse': np.float64(0.0924366697360976)}, Test metrics: {'r2': 0.0916365387592275, 'mae': np.float64(0.03868882778547875), 'rmse': np.float64(0.10460352154997403)}
+load best model 19
+Best Val metrics: {'r2': 0.11171299105859311, 'mae': np.float64(0.033731610419731724), 'rmse': np.float64(0.09349605255068932)}
+Best test metrics: {'r2': 0.08020991253017007, 'mae': np.float64(0.03823378906181581), 'rmse': np.float64(0.10525938780575018)}
+Table as node/edge:
+{'Location_AdsInfo_PhoneRequestsStream': tensor(0.5028, device='cuda:0'), 'Category_SearchInfo_Location': tensor(0.4815, device='cuda:0'), 'UserInfo_SearchInfo_Category': tensor(0.3434, device='cuda:0'), 'Category_AdsInfo_SearchStream': tensor(0.5723, device='cuda:0'), 'AdsInfo_SearchStream_SearchInfo': tensor(0.5069, device='cuda:0'), 'UserInfo_VisitStream_AdsInfo': tensor(0.4377, device='cuda:0'), 'UserInfo_SearchInfo_SearchStream': tensor(0.5038, device='cuda:0'), 'UserInfo_PhoneRequestsStream_AdsInfo': tensor(0.3885, device='cuda:0'), 'Category_SearchInfo_UserInfo': tensor(0.6586, device='cuda:0'), 'Category_SearchInfo_SearchStream': tensor(0.5109, device='cuda:0'), 'UserInfo_SearchInfo_Location': tensor(0.5782, device='cuda:0'), 'Category_AdsInfo_Location': tensor(0.3905, device='cuda:0'), 'Location_AdsInfo_VisitStream': tensor(0.5088, device='cuda:0'), 'Location_SearchInfo_SearchStream': tensor(0.4317, device='cuda:0'), 'Category_AdsInfo_VisitStream': tensor(0.4940, device='cuda:0'), 'Location_SearchInfo_UserInfo': tensor(0.6470, device='cuda:0'), 'Category_AdsInfo_PhoneRequestsStream': tensor(0.4811, device='cuda:0'), 'AdsInfo_PhoneRequestsStream_UserInfo': tensor(0.3587, device='cuda:0'), 'Location_SearchInfo_Category': tensor(0.8785, device='cuda:0'), 'SearchInfo_SearchStream_AdsInfo': tensor(0.4404, device='cuda:0'), 'AdsInfo_VisitStream_UserInfo': tensor(0.2960, device='cuda:0'), 'Location_AdsInfo_SearchStream': tensor(0.5340, device='cuda:0'), 'Location_AdsInfo_Category': tensor(0.4300, device='cuda:0')}
